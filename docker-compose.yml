@@ -1,0 +1,17 @@
+version: "2.0"
+
+services:
+  client:
+    build: ./docker/node
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grpc-client:/usr/src
+    command: ["yarn", "start"]
+  server:
+    build: ./docker/node
+    ports:
+      - 3001:3001
+    volumes:
+      - ./grpc-server:/usr/src
+    command: ["yarn", "start"]

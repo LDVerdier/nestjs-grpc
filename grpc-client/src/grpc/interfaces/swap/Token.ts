@@ -1,4 +1,4 @@
-// Original file: src/grpc/proto/swap.proto
+// Original file: proto/swap.proto
 
 import type { Long } from '@grpc/proto-loader';
 

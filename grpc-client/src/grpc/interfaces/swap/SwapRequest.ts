@@ -1,4 +1,4 @@
-// Original file: src/grpc/proto/swap.proto
+// Original file: proto/swap.proto
 
 import type { TradingPair as _swap_TradingPair, TradingPair__Output as _swap_TradingPair__Output } from '../swap/TradingPair';
 

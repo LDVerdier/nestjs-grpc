@@ -1,4 +1,4 @@
-// Original file: src/grpc/proto/swap.proto
+// Original file: proto/swap.proto
 
 import type { UTxO as _swap_UTxO, UTxO__Output as _swap_UTxO__Output } from '../swap/UTxO';
 import type { TxOut as _swap_TxOut, TxOut__Output as _swap_TxOut__Output } from '../swap/TxOut';

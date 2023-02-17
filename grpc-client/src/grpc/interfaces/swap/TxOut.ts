@@ -1,4 +1,4 @@
-// Original file: src/grpc/proto/swap.proto
+// Original file: proto/swap.proto
 
 import type { Token as _swap_Token, Token__Output as _swap_Token__Output } from '../swap/Token';
 

@@ -1,4 +1,4 @@
-// Original file: src/grpc/proto/swap.proto
+// Original file: proto/swap.proto
 
 import type { TxStatus as _swap_TxStatus, TxStatus__Output as _swap_TxStatus__Output } from '../swap/TxStatus';
 

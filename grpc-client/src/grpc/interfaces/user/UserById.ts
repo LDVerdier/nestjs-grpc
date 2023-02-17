@@ -1,4 +1,4 @@
-// Original file: src/grpc/proto/user.proto
+// Original file: proto/user.proto
 
 
 export interface UserById {

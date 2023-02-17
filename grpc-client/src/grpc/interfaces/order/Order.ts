@@ -1,4 +1,4 @@
-// Original file: src/grpc/proto/order.proto
+// Original file: proto/order.proto
 
 
 export interface Order {

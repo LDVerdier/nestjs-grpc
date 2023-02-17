@@ -1,12 +1,12 @@
 import { Controller } from '@nestjs/common';
 import { GrpcMethod } from '@nestjs/microservices';
-import { LiquidityRequest } from './interfaces/liquidity-request.interface';
-import { TradingPairListResponse } from './interfaces/trading-pair-list-response.interface';
+import { LiquidityRequest__Output } from 'src/grpc/interfaces/swap/LiquidityRequest';
+import { TradingPairListResponse } from 'src/grpc/interfaces/swap/TradingPairListResponse';
 
 @Controller()
 export class SwapController {
   @GrpcMethod('SwapService')
-  init({ tokens }: LiquidityRequest): TradingPairListResponse {
+  init({ tokens }: LiquidityRequest__Output): TradingPairListResponse {
     const [firstToken, secondToken] = tokens;
 
     const pairs: TradingPairListResponse = {

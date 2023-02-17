@@ -8,6 +8,7 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "proto:gen": "yarn proto-loader-gen-types --grpcLib=@grpc/grpc-js --includeComments --longs=Number --outDir=./src/grpc/interfaces ./src/grpc/proto/*.proto",
     "format-check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",

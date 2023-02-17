@@ -1,12 +1,12 @@
 import { Controller } from '@nestjs/common';
 import { GrpcMethod } from '@nestjs/microservices';
-import { OrderById } from './interfaces/order-by-id.interface';
-import { Order } from './interfaces/order.interface';
+import { Order } from 'src/grpc/interfaces/order/Order';
+import { OrderById__Output } from 'src/grpc/interfaces/order/OrderById';
 
 @Controller()
 export class OrderController {
   @GrpcMethod('OrderService')
-  findOne(data: OrderById): Order {
+  findOne(data: OrderById__Output): Order {
     const orders: Order[] = [
       { id: 1, name: 'order 1' },
       { id: 2, name: 'order 2' },

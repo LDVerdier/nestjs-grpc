@@ -7,9 +7,9 @@ export const grpcClientOptions: GrpcOptions = {
     url: 'server:5000', // 'server' keyword refers to the container name as defined in docker-compose.yml
     package: ['user', 'order', 'swap'],
     protoPath: [
-      join(__dirname, './modules/user/user.proto'),
-      join(__dirname, './modules/order/order.proto'),
-      join(__dirname, './modules/swap/swap.proto'),
+      join(__dirname, '../proto/user.proto'),
+      join(__dirname, '../proto/order.proto'),
+      join(__dirname, '../proto/swap.proto'),
     ],
   },
 };

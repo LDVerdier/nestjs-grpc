@@ -1,12 +1,12 @@
 import { Controller } from '@nestjs/common';
 import { GrpcMethod } from '@nestjs/microservices';
-import { UserById } from './interfaces/user-by-id.interface';
-import { User } from './interfaces/user.interface';
+import { User } from 'src/grpc/interfaces/user/User';
+import { UserById__Output } from 'src/grpc/interfaces/user/UserById';
 
 @Controller()
 export class UserController {
   @GrpcMethod('UserService')
-  findOne(data: UserById): User {
+  findOne(data: UserById__Output): User {
     const users: User[] = [
       { id: 1, name: 'User 1' },
       { id: 2, name: 'User 2' },

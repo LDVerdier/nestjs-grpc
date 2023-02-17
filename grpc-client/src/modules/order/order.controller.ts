@@ -1,10 +1,10 @@
 import { Controller, Get, Inject, OnModuleInit, Param } from '@nestjs/common';
 import { ClientGrpc } from '@nestjs/microservices';
-import { OrderById } from './interfaces/order-by-id.interface';
-import { Order } from './interfaces/order.interface';
+import { Order__Output } from 'src/grpc/interfaces/order/Order';
+import { OrderById } from 'src/grpc/interfaces/order/OrderById';
 
 interface OrderService {
-  findOne(data: OrderById): Order;
+  findOne(data: OrderById): Order__Output;
 }
 
 @Controller('order')
@@ -17,7 +17,7 @@ export class OrderController implements OnModuleInit {
   }
 
   @Get(':id')
-  getById(@Param('id') id: string): Order {
+  getById(@Param('id') id: string): Order__Output {
     return this.orderService.findOne({ id: +id });
   }
 }

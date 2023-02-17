@@ -19,7 +19,6 @@ export class SwapController implements OnModuleInit {
   @Get()
   init(@Query('tokens') commaSeparatedTokens: string): TradingPairListResponse {
     const tokens = commaSeparatedTokens.split(',');
-    console.info('tokens', tokens);
 
     return this.swapService.init({ tokens });
   }

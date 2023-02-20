@@ -4,6 +4,7 @@ package user;
 
 service UserService {
   rpc FindOne (UserById) returns (User) {}
+  rpc BidirectionalGreet(stream GreetRequest) returns (stream GreetResponse) {}
 }
 
 message UserById {
@@ -13,4 +14,12 @@ message UserById {
 message User {
   int32 id = 1;
   string name = 2;
+}
+
+message GreetRequest {
+  string greeter = 1;
+}
+  
+  message GreetResponse {
+  string reply = 1;
 }

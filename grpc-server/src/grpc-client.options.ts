@@ -11,5 +11,8 @@ export const grpcClientOptions: GrpcOptions = {
       join(__dirname, '../proto/order.proto'),
       join(__dirname, '../proto/swap.proto'),
     ],
+    loader: {
+      longs: Number,
+    },
   },
 };

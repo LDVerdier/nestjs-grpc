@@ -17,3 +17,11 @@ services:
       - ./grpc-server:/usr/src
       - ./proto:/usr/src/proto
     command: ["yarn", "start"]
+  hybrid:
+    build: ./docker/node
+    ports:
+      - 3002:3002
+    volumes:
+      - ./grpc-hybrid-server:/usr/src
+      - ./proto:/usr/src/proto
+    command: ["yarn", "start"]

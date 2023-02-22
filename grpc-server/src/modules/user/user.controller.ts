@@ -11,8 +11,8 @@ export class UserController {
   @GrpcMethod('UserService')
   findOne(data: UserById__Output): User {
     const users: User[] = [
-      { id: 1, name: 'User 1' },
-      { id: 2, name: 'User 2' },
+      { id: 1, name: 'User 1 server' },
+      { id: 2, name: 'User 2 server' },
     ];
 
     return users.find(({ id }) => id === data.id);
@@ -25,7 +25,9 @@ export class UserController {
     const greetResponses$ = new Subject<GreetResponse>();
 
     const onNext = (greet: GreetRequest__Output) => {
-      const item: GreetResponse = { reply: `hello ${greet.greeter}` };
+      const item: GreetResponse = {
+        reply: `hello ${greet.greeter} from server`,
+      };
       greetResponses$.next(item);
     };
     const onComplete = () => greetResponses$.complete();

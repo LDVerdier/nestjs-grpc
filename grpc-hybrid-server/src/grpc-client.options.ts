@@ -4,7 +4,7 @@ import { join } from 'path';
 export const grpcClientOptions: GrpcOptions = {
   transport: Transport.GRPC,
   options: {
-    url: 'server:5000', // 'server'|'hybrid' keyword refers to the container name as defined in docker-compose.yml
+    url: '0.0.0.0:5000', // in docker context, the 'localhost' keyword would not work
     package: ['user', 'order', 'swap'],
     protoPath: [
       join(__dirname, '../proto/user.proto'),
